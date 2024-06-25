@@ -1,9 +1,7 @@
 import spacy
 
-# Carregar o modelo de linguagem
 nlp = spacy.load("en_core_web_sm")
 
-# Função para analisar a frase
 def analyze_sentence(text):
     doc = nlp(text)
     return [
@@ -16,7 +14,6 @@ def analyze_sentence(text):
         for token in doc
     ]
 
-# Função principal
 def main():
     text = input("Introduza o seu texto: ")
     result = analyze_sentence(text)
